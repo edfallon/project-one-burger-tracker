@@ -19,5 +19,11 @@ class Burger
     @id = result[0]["id"].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM burgers WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 
 end
