@@ -5,7 +5,7 @@ class TestBurger < MiniTest::Test
 
 
   def setup
-    @burger1 = Burger.new("Cheeseburger")
+    @burger1 = Burger.new({"id" => "1", "name" => "Cheeseburger"})
   end
 
   def test_burger_name
