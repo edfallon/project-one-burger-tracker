@@ -32,5 +32,11 @@ class Burger
     return Burger.new(result[0])
   end
 
+  def self.all()
+    sql = "SELECT * FROM burgers"
+    result = SqlRunner.run(sql)
+    return result.map{|burger| Burger.new(burger)}
+  end
+
 
 end #end of class
