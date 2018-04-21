@@ -12,5 +12,9 @@ class TestBurger < MiniTest::Test
     assert_equal("Cheeseburger", @burger1.name)
   end
 
+  def test_burger_id
+    assert_equal(1, @burger1.id)
+  end
+
 
 end
