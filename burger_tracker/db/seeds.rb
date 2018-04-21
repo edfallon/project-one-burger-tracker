@@ -1,6 +1,8 @@
 require_relative("../models/burger.rb")
 require("pry-byebug")
 
+Burger.delete_all()
+
 
  burger1 = Burger.new({
   "name" => "Cheeseburger"

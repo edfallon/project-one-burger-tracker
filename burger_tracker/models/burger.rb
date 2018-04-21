@@ -38,5 +38,10 @@ class Burger
     return result.map{|burger| Burger.new(burger)}
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM burgers"
+    SqlRunner.run(sql)
+  end
+
 
 end #end of class
