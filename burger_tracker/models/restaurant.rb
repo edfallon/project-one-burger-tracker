@@ -40,4 +40,11 @@ class Restaurant
     return result.map{|restaurant| Restaurant.new(restaurant)}
   end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM restaurants WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    return Restaurant.new(result.first)
+  end
+
 end #end of class

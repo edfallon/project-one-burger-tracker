@@ -3,6 +3,7 @@ require_relative("../models/restaurant.rb")
 require("pry-byebug")
 
 Burger.delete_all()
+Restaurant.delete_all()
 
 
 
