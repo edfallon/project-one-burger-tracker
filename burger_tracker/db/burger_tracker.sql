@@ -1,4 +1,11 @@
 DROP TABLE burgers;
+DROP TABLE restaurants;
+
+
+CREATE TABLE restaurants(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255)
+);
 
 
 

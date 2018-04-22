@@ -1,7 +1,28 @@
 require_relative("../models/burger.rb")
+require_relative("../models/restaurant.rb")
 require("pry-byebug")
 
 Burger.delete_all()
+
+
+
+restaurant1 = Restaurant.new({
+  "name" => "Grillz"
+  })
+
+ restaurant1.save()
+
+restaurant2 = Restaurant.new({
+  "name" => "Burger House"
+  })
+
+  restaurant2.save()
+
+restaurant3 = Restaurant.new({
+  "name" => "Bites"
+  })
+
+  restaurant3.save()
 
 
  burger1 = Burger.new({
