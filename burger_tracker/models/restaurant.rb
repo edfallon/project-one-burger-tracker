@@ -29,6 +29,11 @@ class Restaurant
     SqlRunner.run(sql, values)
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM restaurants"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM restaurants"
     result = SqlRunner.run(sql)
