@@ -5,8 +5,6 @@ require("pry-byebug")
 Burger.delete_all()
 Restaurant.delete_all()
 
-
-
 restaurant1 = Restaurant.new({
   "name" => "Grillz"
   })
@@ -25,24 +23,31 @@ restaurant3 = Restaurant.new({
 
   restaurant3.save()
 
+burger1 = Burger.new({
+ "name" => "Cheeseburger",
+  "restaurant" => restaurant1.id
+ })
 
- burger1 = Burger.new({
-  "name" => "Cheeseburger"
-  })
+ burger1.save()
 
-  burger1.save()
+burger2 = Burger.new({
+  "name" => "Chicken burger",
+  "restaurant" => restaurant2.id
+ })
 
- burger2 = Burger.new({
-   "name" => "Chicken burger"
-  })
+ burger2.save()
 
-  burger2.save()
+burger3 = Burger.new({
+ "name" => "Veggie burger",
+ "restaurant" => restaurant3.id
+ })
 
- burger3 = Burger.new({
-  "name" => "Veggie burger"
-  })
+ burger3.save()
 
-  burger3.save()
+
+
+
+
 
 
 
