@@ -17,4 +17,10 @@ class Restaurant
     @id = result[0]["id"].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM restaurants"
+    result = SqlRunner.run(sql)
+    return result.map{|restaurant| Restaurant.new(restaurant)}
+  end
+
 end #end of class
