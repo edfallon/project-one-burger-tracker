@@ -1,6 +1,16 @@
+<h1>Restaurants</h1>
+
 <% @restaurants.each do |restaurant| %>
-<p>Name: <%=restaurant.name%></p>
+<!-- <p>Name: <%=restaurant.name%></p> -->
+<a href="/restaurant/<%=restaurant.id%>"><%=restaurant.name%></a>
 
 
 <hr />
 <%end%>
+
+
+
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/restaurants/new">Add new restaurant</a>

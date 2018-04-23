@@ -1,10 +1,10 @@
-<form class="" action="/burger-tracker" method="post">
+<form class="" action="/restaurant/burgers" method="post">
   <label for="name">Burger Name</label>
   <input type="text" name="name" id="name">
   <br>
   <label for="restaurant">Restaurant</label>
   <select name="restaurant" id="restaurant">
-    <% @restaurant.each do |restaurant| %>
+    <% @restaurants.each do |restaurant| %>
       <option value=<%= restaurant.id %>><%=restaurant.name%></option>
     <% end %>
   </select>

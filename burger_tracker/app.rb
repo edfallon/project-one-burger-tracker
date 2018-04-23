@@ -9,6 +9,5 @@ require_relative('controllers/deals_controller')
 require_relative('controllers/restaurant_controller')
 
 get '/' do
-  erb( :"views/index" )
+  erb( :"index" )
 end
- 

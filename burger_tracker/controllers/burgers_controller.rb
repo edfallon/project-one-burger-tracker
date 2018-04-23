@@ -10,12 +10,16 @@ get "/restaurant/:id/burgers" do
   erb(:"burgers/index")
 end
 
-get "/restaurant/:id/burgers/new" do
-  @restaurant = Restaurant.all()
+get "/restaurants/burgers/new" do
+  @restaurants = Restaurant.all()
   erb(:"burgers/new")
 end
 
-post "/restaurant/:id/burgers" do
+# get "/restaurants/:id/burgers" do
+#   @restaurant = Restaurant.find_by_id(params['id'].to_i)
+# end
+
+post "/restaurant/burgers" do
   burger = Burger.new(params)
   burger.save()
   redirect to "/restaurants"

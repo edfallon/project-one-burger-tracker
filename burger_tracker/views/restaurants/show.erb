@@ -1,0 +1,37 @@
+<p><%=@restaurant.name%></p>
+
+<% for burger in @restaurant.find_burgers() %>
+<p><%=burger.name%></p>
+<%end%>
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/restaurants/burgers/new">Add new burger</a>
+
+
+<h2>Deals</h2>
+<nav>
+  <ul>
+    <li>
+      <a href="/">Monday</a>
+    </li>
+    <li>
+      <a href="/">Tuesday</a>
+    </li>
+    <li>
+      <a href="/">Wednesday</a>
+    </li>
+    <li>
+      <a href="/">Thursday</a>
+    </li>
+    <li>
+      <a href="/">Friday</a>
+    </li>
+    <li>
+      <a href="/">Saturday</a>
+    </li>
+    <li>
+      <a href="/">Sunday</a>
+    </li>
+  </ul>
+</nav>
