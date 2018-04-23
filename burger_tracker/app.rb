@@ -4,13 +4,10 @@ require("sinatra/contrib/all")
 require_relative("models/burger.rb")
 require_relative("models/restaurant.rb")
 
+require_relative('controllers/burgers_controller')
+require_relative('controllers/deals_controller')
+require_relative('controllers/restaurant_controller')
 
-get "/burger-tracker" do
-  @burgers = Burger.all()
-  erb(:index)
-end
-
-get "/burger-tracker/new-burger" do
-  @restaurant = Restaurant.all()
-  erb(:new)
+get '/' do
+  erb( :"views/index" )
 end
