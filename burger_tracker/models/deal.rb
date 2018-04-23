@@ -8,8 +8,8 @@ class Deal
   def initialize(options)
     @id = options["id"].to_i
     @name = options["name"]
-    @restaurant = options["id"].to_i
-    @burger = options["id"].to_i
+    @restaurant = options["restaurant"].to_i
+    @burger = options["burger"].to_i
   end
 
 end
