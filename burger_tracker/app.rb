@@ -11,3 +11,4 @@ require_relative('controllers/restaurant_controller')
 get '/' do
   erb( :"views/index" )
 end
+ 

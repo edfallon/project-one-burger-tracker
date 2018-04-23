@@ -29,6 +29,13 @@ class Restaurant
     SqlRunner.run(sql, values)
   end
 
+  def find_burgers()
+    sql = "SELECT * FROM burgers WHERE id = $1"
+    values = [@burgers]
+    result = SqlRunner.run(sql, values)
+    return Burger.new(result[0])
+  end
+
   def self.delete_all()
     sql = "DELETE FROM restaurants"
     SqlRunner.run(sql)
