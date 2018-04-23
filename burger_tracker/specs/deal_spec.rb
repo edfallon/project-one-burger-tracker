@@ -17,5 +17,9 @@ class TestBurger < MiniTest::Test
     assert_equal("tuesday 241", @deal1.name)
   end
 
+  def test_deal_id
+    assert_equal(1, @deal1.id)
+  end
+
 
 end
