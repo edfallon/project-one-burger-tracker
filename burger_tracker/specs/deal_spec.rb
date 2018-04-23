@@ -8,8 +8,7 @@ class TestDeal < MiniTest::Test
     @deal1 = Deal.new(
       {"id" => "1",
         "name" => "tuesday 241",
-        "restaurant" => 13,
-        "burger" => "4"
+        "day" => "tuesday"
         })
   end
 
@@ -21,13 +20,11 @@ class TestDeal < MiniTest::Test
     assert_equal(1, @deal1.id)
   end
 
-  def test_deal_restaurant_id
-    assert_equal(13, @deal1.restaurant)
+  def test_deal_day
+    assert_equal("tuesday", @deal1.day)
   end
 
-  def test_deal_burger_id
-    assert_equal(4, @deal1.burger)
-  end
+
 
 
 end
