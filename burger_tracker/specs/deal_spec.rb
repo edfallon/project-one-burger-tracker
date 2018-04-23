@@ -25,5 +25,9 @@ class TestDeal < MiniTest::Test
     assert_equal(13, @deal1.restaurant)
   end
 
+  def test_deal_burger_id
+    assert_equal(4, @deal1.burger)
+  end
+
 
 end
