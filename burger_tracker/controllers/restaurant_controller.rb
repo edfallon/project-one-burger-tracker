@@ -8,7 +8,7 @@ get "/restaurants" do
   erb(:"restaurants/index")
 end
 
-get '/restaurant/:id' do
-  @restaurant = .find(params['id'].to_i)
-  erb(:"restaurant/new")
-end
+# get '/restaurant/:id' do
+#   @restaurant = .find(params['id'].to_i)
+#   erb(:"restaurant/new")
+# end

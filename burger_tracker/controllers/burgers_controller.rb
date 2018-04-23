@@ -5,7 +5,8 @@ require_relative("../models/burger.rb")
 
 
 get "/restaurant/:id/burgers" do
-  @burgers = Burger.all()
+  @restaurant = Restaurant.find_by_id(params['id'].to_i)
+  @burgers = @restaurant.find_burgers()
   erb(:"burgers/index")
 end
 

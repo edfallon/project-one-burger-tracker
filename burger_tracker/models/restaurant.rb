@@ -30,10 +30,10 @@ class Restaurant
   end
 
   def find_burgers()
-    sql = "SELECT * FROM burgers WHERE id = $1"
-    values = [@burgers]
+    sql = "SELECT burgers.* FROM burgers INNER JOIN restaurants ON burgers.restaurant = restaurants.id WHERE restaurants.id = $1"
+    values = [@id]
     result = SqlRunner.run(sql, values)
-    return Burger.new(result[0])
+    result.map {|burger| Burger.new(burger)}
   end
 
   def self.delete_all()
