@@ -52,12 +52,12 @@ burger3 = Burger.new({
    "day" => "tuesday"
    })
 
- deal1 = Deal.new({
+ deal2 = Deal.new({
   "name" => "half price",
   "day" => "wednesday"
   })
 
- deal1 = Deal.new({
+ deal3 = Deal.new({
   "name" => "friend eats free",
   "day" => "friday"
   })
