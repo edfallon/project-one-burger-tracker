@@ -1,5 +1,7 @@
 require_relative("../models/burger.rb")
 require_relative("../models/restaurant.rb")
+require_relative("../models/deals.rb")
+require_relative("../models/burger_deals.rb")
 require("pry-byebug")
 
 Burger.delete_all()
