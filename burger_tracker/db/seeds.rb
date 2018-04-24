@@ -47,6 +47,21 @@ burger3 = Burger.new({
  burger3.save()
 
 
+ deal1 = Deal.new({
+   "name" => "241",
+   "day" => "tuesday"
+   })
+
+ deal1 = Deal.new({
+  "name" => "half price",
+  "day" => "wednesday"
+  })
+
+ deal1 = Deal.new({
+  "name" => "friend eats free",
+  "day" => "friday"
+  })
+
 
 
 
