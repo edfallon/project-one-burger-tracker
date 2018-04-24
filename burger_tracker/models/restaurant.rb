@@ -30,10 +30,17 @@ class Restaurant
   end
 
   def find_burgers()
-    sql = "SELECT burgers.* FROM burgers INNER JOIN restaurants ON burgers.restaurant = restaurants.id WHERE restaurants.id = $1"
+    sql = "SELECT * FROM burgers WHERE restaurant = $1"
     values = [@id]
     result = SqlRunner.run(sql, values)
     result.map {|burger| Burger.new(burger)}
+  end
+
+  def find_deals()
+    sql = "SELECT deals.* FROM deals INNER JOIN burger_deals ON deals.id = burger_deals.deal_id INNER JOIN burgers ON burgers.id = burger_deals.burger_id WHERE burgers.restaurant = $1 GROUP BY deals.id"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    result.map {|deal| Deal.new(deal)}
   end
 
   def self.delete_all()

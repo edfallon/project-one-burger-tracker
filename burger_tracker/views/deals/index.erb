@@ -1,0 +1,14 @@
+<h1>Deals</h1>
+
+<% @deals.each do |deal| %>
+
+<a href="/deal/<%=deal.id%>"><%=deal.name%></a>
+
+
+<hr />
+<%end%>
+
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/">Home</a>

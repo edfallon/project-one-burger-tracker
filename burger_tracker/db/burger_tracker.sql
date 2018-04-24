@@ -1,5 +1,5 @@
 DROP TABLE burger_deals;
-DROP TABLE deals:
+DROP TABLE deals;
 DROP TABLE burgers;
 DROP TABLE restaurants;
 

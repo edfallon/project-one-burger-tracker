@@ -20,6 +20,6 @@ end
 
 get '/restaurant/:id' do
   @restaurant = Restaurant.find_by_id(params['id'].to_i)
-
+  @restaurant_deals = @restaurant.find_deals()
   erb(:"restaurants/show")
 end

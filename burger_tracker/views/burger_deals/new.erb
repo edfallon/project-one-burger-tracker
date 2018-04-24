@@ -1,0 +1,23 @@
+<form class="" action="/burger-deals" method="post">
+  <p>Add burger to deal</p>
+  <br>
+  <label for="deal">Deal</label>
+  <select name=<%="deal_id"%> id="deal">
+    <% @deals.each do |deal| %>
+      <option value=<%= deal.id %>><%=deal.name%></option>
+    <% end %>
+  </select>
+  <label for="burger">Burger</label>
+  <select name=<%="burger_id"%> id="burger">
+    <% @burgers.each do |burger| %>
+      <option value=<%= burger.id %>><%=burger.name%>(<%=burger.find_restaurant.name%>)</option>
+    <% end %>
+  </select>
+  <br>
+  <input type="submit" value="Create">
+
+</form>
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/">Home</a>

@@ -1,13 +1,14 @@
 require_relative("../models/burger.rb")
 require_relative("../models/restaurant.rb")
-require_relative("../models/deals.rb")
-require_relative("../models/burger_deals.rb")
+require_relative("../models/deal.rb")
+require_relative("../models/burger_deal.rb")
 require("pry-byebug")
 
+BurgerDeal.delete_all()
 Burger.delete_all()
 Restaurant.delete_all()
 Deal.delete_all()
-BurgerDeal.delete_all()
+
 
 restaurant1 = Restaurant.new({
   "name" => "Grillz"
@@ -75,7 +76,7 @@ burger3 = Burger.new({
     "burger_id" => burger1.id
     })
 
-    burger_deal.save()
+    burger_deal1.save()
 
   burger_deal2 =BurgerDeal.new({
     "deal_id" => deal2.id,

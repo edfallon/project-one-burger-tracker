@@ -1,7 +1,7 @@
 require_relative("../db/sql_runner")
 
 
-# require_relative("../models/burgers.rb")
+require_relative("../models/burger.rb")
 # require_relative("../models/restaurants.rb")
 
 class BurgerDeal
@@ -33,6 +33,13 @@ class BurgerDeal
     values = [@id]
     SqlRunner.run(sql, values)
   end
+
+  def update()
+    sql = "UPDATE burger_deals SET (name, day,) = ($1, $2) WHERE id = $3"
+    values = [@name, @day, @id]
+    SqlRunner.run(sql, values)
+  end
+
 
   def self.find_by_id(id)
     sql = "SELECT * FROM burger_deals WHERE id = $1"

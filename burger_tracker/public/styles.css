@@ -1,0 +1,75 @@
+/* <div class="page">
+  <div class="nav">
+
+  </div>
+  <div class="viewport">
+
+  </div>
+</div> */
+
+/* .page {
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  width:33%;
+}
+
+.viewport {
+  width:66%;
+} */
+
+h1{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: white url('http://www.corporatecomplianceinsights.com/wp-content/uploads/2015/09/burger.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Merriweather', serif;
+  /* padding: 50px;
+  margin: 50px; */
+}
+
+a{
+  color: white;
+  padding: 1px;
+  margin: 100px;
+  font-size: 2em
+}
+
+
+
+.rest{
+  color: white;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+li p{
+  display: block;
+}
+/*
+/* li{
+  display: flex;
+
+/* }
+
+/* h2{
+  margin: 100px;
+} */
+
+/* p{
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */

@@ -1,0 +1,15 @@
+<p><%=@deal.name%></p>
+
+<ul>
+  <%for burger in @deal.burgers_in_deals()%>
+    <li><%=burger.name%></li>
+  <%end%>
+</ul>
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/burger-deals">Add burger</a>
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/">Home</a>

@@ -1,37 +1,31 @@
-<p><%=@restaurant.name%></p>
+<div class= "rest"><p><%=@restaurant.name%></p></div>
+
+<h2>Burgers</h2>
+<ul>
+
 
 <% for burger in @restaurant.find_burgers() %>
+  <li>
 <p><%=burger.name%></p>
+  </li>
 <%end%>
 
 
-<p class="btn--wrapper">
-<a class="btn btn--action" href="/restaurants/burgers/new">Add new burger</a>
-
-
+</ul>
+<br>
 <h2>Deals</h2>
-<nav>
-  <ul>
-    <li>
-      <a href="/">Monday</a>
-    </li>
-    <li>
-      <a href="/">Tuesday</a>
-    </li>
-    <li>
-      <a href="/">Wednesday</a>
-    </li>
-    <li>
-      <a href="/">Thursday</a>
-    </li>
-    <li>
-      <a href="/">Friday</a>
-    </li>
-    <li>
-      <a href="/">Saturday</a>
-    </li>
-    <li>
-      <a href="/">Sunday</a>
-    </li>
-  </ul>
-</nav>
+<% for deal in @restaurant_deals %>
+  <p><a href= "/deal/<%=deal.id%>"><%=deal.name%>(<%=deal.day%>)</a></p>
+<%end%>
+<br>
+<br>
+
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/restaurants/burgers/new">Add new burger to restaurant</a>
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/burger-deals">Add burger to a deal</a>
+
+<p class="btn--wrapper">
+<a class="btn btn--action" href="/">Home</a>
