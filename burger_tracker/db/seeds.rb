@@ -6,6 +6,8 @@ require("pry-byebug")
 
 Burger.delete_all()
 Restaurant.delete_all()
+Deal.delete_all()
+BurgerDeal.delete_all()
 
 restaurant1 = Restaurant.new({
   "name" => "Grillz"
@@ -52,15 +54,42 @@ burger3 = Burger.new({
    "day" => "tuesday"
    })
 
+   deal1.save()
+
  deal2 = Deal.new({
   "name" => "half price",
   "day" => "wednesday"
   })
 
+  deal2.save()
+
  deal3 = Deal.new({
   "name" => "friend eats free",
   "day" => "friday"
   })
+
+  deal3.save()
+
+  burger_deal1 =BurgerDeal.new({
+    "deal_id" => deal1.id,
+    "burger_id" => burger1.id
+    })
+
+    burger_deal.save()
+
+  burger_deal2 =BurgerDeal.new({
+    "deal_id" => deal2.id,
+    "burger_id" => burger2.id
+    })
+
+    burger_deal2.save()
+
+  burger_deal3 =BurgerDeal.new({
+    "deal_id" => deal3.id,
+    "burger_id" => burger3.id
+    })
+
+    burger_deal3.save
 
 
 
