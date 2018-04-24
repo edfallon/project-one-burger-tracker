@@ -1,4 +1,4 @@
--- DROP TABLE burger_deals;
+DROP TABLE burger_deals;
 DROP TABLE deals:
 DROP TABLE burgers;
 DROP TABLE restaurants;
@@ -26,5 +26,8 @@ CREATE TABLE deals(
 );
 
 CREATE TABLE burger_deals(
+  id SERIAL PRIMARY KEY,
+  deal_id INT REFERENCES deals(id),
+  burger_id INT REFERENCES burgers(id)
 
 );
