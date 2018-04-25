@@ -9,10 +9,7 @@
 <p><%=burger.name%></p>
   </li>
 <%end%>
-
-
 </ul>
-<br>
 <h2>Deals</h2>
 <% for deal in @restaurant_deals %>
   <p><a href= "/deal/<%=deal.id%>"><%=deal.name%>(<%=deal.day%>)</a></p>
@@ -28,4 +25,4 @@
 <a class="btn btn--action" href="/burger-deals">Add burger to a deal</a>
 
 <p class="btn--wrapper">
-<a class="btn btn--action" href="/">Home</a>
+<a class="btn btn--action" href="/">Home</a><a href="/restaurants">Restaurants</a>

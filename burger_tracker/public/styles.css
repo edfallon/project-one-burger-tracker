@@ -45,6 +45,25 @@ a{
   font-size: 2em
 }
 
+/* p{
+  font-size: 2em;
+  /* margin: 100px; */
+/* } */
+
+/* p a{
+  font-size: 1em;
+} */
+/*
+p{
+  color: white;
+  font-size: 1em
+} */
+
+p a{
+  color: white;
+  font-size: 2em
+}
+
 
 
 .rest{
@@ -54,22 +73,30 @@ a{
   justify-content: center;
 }
 
-li p{
-  display: block;
+li {
+  padding: 10px;
 }
-/*
-/* li{
+
+ul {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
 
-/* }
+/* li p {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 16px;
+    text-decoration: none;
+} */ */
 
-/* h2{
-  margin: 100px;
-} */
 
-/* p{
-  color: white;
-  display: flex;
+/* form{
+  display: inline-block;
   justify-content: center;
-  align-items: center;
-} */
+  margin: 100px; */
+
+
+}
